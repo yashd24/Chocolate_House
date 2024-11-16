@@ -1,0 +1,61 @@
+{% load static%}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Details</title>
+    <link rel="stylesheet" href="{% static 'CSS/inventory.css' %}" />
+  </head>
+  <body>
+    <header>
+      <h1>Chocolate House Inventory</h1>
+      <p>Fresh Ingredients and Stock</p>
+    </header>
+    <h1>Inventory Details</h1>
+    <table>
+      <tr>
+        <th>Ingredients Name</th>
+        <th>Quantity</th>
+        <th>Unit</th>
+      </tr>
+      {% for item in items %}
+      <tr>
+        <td>{{ item.ingredient_name }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.unit }}</td>
+        <td>
+          <button class="delete-button" data-id="{{ item.id }}">Delete</button>
+        </td>
+      </tr>
+
+      {% endfor %}
+    </table>
+
+    <!-- Update Inventory -->
+    <section id="update-inventory">
+      <h2>Update Inventory</h2>
+
+      <form id="inventory-form">
+        {% csrf_token %}
+        <label for="ingredient_name">Ingredient Name:</label>
+        <input
+          type="text"
+          id="ingredient_name"
+          name="ingredient_name"
+          required
+        />
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required />
+
+        <label for="unit">Unit:</label>
+        <input type="text" id="unit" name="unit" required />
+
+        <button type="submit">Update Inventory</button>
+      </form>
+    </section>
+    <script src="{% static 'JS/inventory.js' %}"></script>
+  </body>
+</html>
