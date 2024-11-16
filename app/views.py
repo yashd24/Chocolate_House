@@ -52,13 +52,6 @@ class IngredientsView(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class SeasonalFlavorsView(APIView):
-    def get(self, request):
-        seasonal_flavors = Flavors.objects.filter(seasonal=True)
-        serializer = FlavorsSerializer(seasonal_flavors, many=True)
-        return Response(serializer.data)
-
-
 class SuggestionsView(APIView):
     def get(self, request):
         suggestions = Customer_Suggestions.objects.all()

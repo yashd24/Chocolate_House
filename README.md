@@ -1,6 +1,6 @@
 # Chocolate House
 
-A brief description of what this project does and who it's for
+A web-based **Inventory Management System** for Chocolate House built using **Django**. This system allows users to manage inventory items, including adding, deleting, and updating product details like ingredient name, quantity, and unit. It also includes a **Customer Suggestions** feature, where customers can submit their flavor suggestions and allergy concerns.
 
 ## Features
 
@@ -44,4 +44,8 @@ This will:
 
 - Build the Docker images.
 - Start services for the web app.
-- The application will be accessible at http://<your_server_ip>:8002.
+- The application will be accessible at http://<your_server_ip>:8002 or (http://localhost:8002).
+
+## Documentation
+
+## [Postman Link](https://orange-comet-842903.postman.co/workspace/SocialApp~4793c6e6-ca9d-4829-b619-c437488e9a69/collection/27788962-deaba1ef-61c1-48dc-9fb6-9c1eeb2ba585?action=share&creator=27788962)
