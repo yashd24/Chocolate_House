@@ -82,33 +82,3 @@ document.getElementById("suggestions-form").addEventListener("submit", async fun
 
 
 
-// async function postCustomerSuggestion(event){
-//     event.preventDefault
-//     const customerName = document.getElementById("customer_name").value;
-//     const customerEmail = document.getElementById("customer_email").value;
-//     const flavorSuggestion = document.getElementById("flavor_suggestion").value;
-//     const alergyConcern = document.getElementById("allergy_concern").value;
-
-//     const data = {
-//         customer_name: customerName,
-//         customer_email: customerEmail,
-//         flavor_suggestion: flavorSuggestion,
-//         allergy_concern: alergyConcern
-//     };
-
-//     const response = await fetch("http://localhost:8002/suggestions/", {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify(data)
-//     })
-
-//     if (response.ok){
-//         alert("Suggestion Successfully Submitted!");
-//     }
-//     else{
-//         alert("Error submitting suggestion");}
-// }
-
-// document.getElementById("suggestions-form").addEventListener("submit", postCustomerSuggestion);
