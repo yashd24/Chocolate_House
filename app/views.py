@@ -74,3 +74,9 @@ def inventory(request):
     items = Inventory.objects.all()
 
     return render(request, 'app/inventory.html', {'items': items})
+
+
+def customers_suggestions(request):
+    customers = Customer_Suggestions.objects.all()
+
+    return render(request, 'app/customers.html', {'customers': customers})

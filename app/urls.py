@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import FlavorsView, IngredientsView, SuggestionsView, index, inventory
+from .views import FlavorsView, IngredientsView, SuggestionsView, index, inventory, customers_suggestions
 
 urlpatterns = [
     path('', index, name='index'),
@@ -7,6 +7,7 @@ urlpatterns = [
     path('flavors/<int:pk>/', FlavorsView.as_view(), name='flavors'),
     path('inventory/', IngredientsView.as_view(), name='ingredients'),
     path('inventory/<int:pk>/', IngredientsView.as_view(), name='ingredients'),
-    path('suggestions/', SuggestionsView.as_view(), name='suggestions'),
-    path('inventory-page/', inventory, name='inventory')
+    path('suggestions/', customers_suggestions, name='suggestions'),
+    path('inventory-page/', inventory, name='inventory'),
+
 ]

@@ -51,7 +51,7 @@ document.getElementById("suggestions-form").addEventListener("submit", async fun
     const customer_email = formData.get("customer_email");
     const flavor_suggestion = formData.get("flavor_suggestion");
     const allergy_concern = formData.get("allergy_concern");
-    console.log({ ingredient_name, quantity, unit });
+    console.log(customer_name, customer_email, flavor_suggestion, allergy_concern);
 
     try{
         response = await fetch("http://localhost:8002/suggestions/", {
